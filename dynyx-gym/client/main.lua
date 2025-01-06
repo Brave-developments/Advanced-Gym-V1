@@ -140,10 +140,9 @@ CreateThread(function()
 end)
 
 local function hasItem(source, itemName, callback)
-  if config.inventory == 'ox_inventory' then
-      exports.ox_inventory:HasItem(source, itemName, function(hasItem)
-          callback(hasItem)
-      end)
+if config.inventory == 'ox_inventory' then
+        local count = exports.ox_inventory:Search('count', itemName)
+        callback(count > 0)
   elseif config.inventory == 'qb-inventory' then
       QBCore.Functions.TriggerCallback('QBCore:HasItem', function(hasItem)
           callback(hasItem)
