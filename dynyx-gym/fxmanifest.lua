@@ -10,9 +10,11 @@ client_scripts {
 	'@PolyZone/client.lua',
 	'@PolyZone/BoxZone.lua',
 	'client/*.lua',
-    'config.lua',
+  
 }
-
+shared_scripts {
+    'config.lua'
+}
 server_scripts {
 	'server/*.lua',
 }

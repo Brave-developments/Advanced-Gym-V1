@@ -4,6 +4,7 @@
 
 
 config = {}
+config.inventory = 'default' -- Options: 'ox_inventory', 'qb-inventory', 'ps-inventory', 'default'
 
 config.GymNPC = {
     pedname = "a_m_y_clubcust_04", -- Name of the Ped
